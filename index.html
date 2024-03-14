@@ -18,7 +18,7 @@
       .border-light{ border-color: #00a884;}
     </style>
 </head>
-<body >
+<body>
     <div>
     <!--  First section: cover -->
     <div class="min-h-screen relative">
@@ -29,7 +29,7 @@
         <!--  Black transparent layer -->
         <div class="flex justify-end ">
           <button class="border text-white hover:border-white hover:bg-white hover:text-black rounded-full transition ease-in-out animate-pulse">
-            <a href="#portfolio" class="flex items-center py-2 px-3 space-x-3"><span>Portfolio </span><i class="fa-solid fa-code"></i></a>
+            <a href="#portfolio" class="flex items-center py-2 px-3 space-x-3 nav-link"><span>Portfolio </span><i class="fa-solid fa-code"></i></a>
           </button>
         </div>
         <img src='./Images/profile-pic.png' width={200} height={200} class="rounded-full mb-5 w-3/6 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64"/>
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-  <!--  Second section: Education and Experience -->
+    <!--  Second section: Education and Experience -->
     <div class="flex flex-col md:flex-row">
       <!--  Second(a) section: Education-->
       <div class="bg-darker p-10 pt-20 lg:p-20 w-full md:w-1/3 md:min-h-screen">
@@ -170,9 +170,7 @@
                   <li>Translated design mockups into functional and responsive web interfaces.</li>
                   <li>Helped the colleagues with overcoming the design and development related challenges.</li>
                 </ul>
-              </time>
-
-              
+              </time>   
           </li>
           <li class="ms-8">
               <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
@@ -181,7 +179,13 @@
               <h3 class="mb-1 text-md font-normal text-white">Web Designer and Developer</h3>
               <time class="block mb-2 text-sm font-normal leading-none text-white">Grouper Logic · Internship</time>
               <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Sep 2017 - Feb 2018 · 6 mos</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Rawalpindi, Punjab, Pakistan · On-site</time>       
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Rawalpindi, Punjab, Pakistan · On-site</time>   
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">
+                <ul class="list-disc">
+                  <li>Learned web layout design using Photoshop, prioritizing user-friendly interfaces.</li>
+                  <li>Practiced converting mockups into functional web interfaces with focus on responsiveness and functionality.</li>
+                </ul>    
+              </time>
           </li>
         </ol>
       </div>
@@ -195,8 +199,7 @@
       </div>
     </div>
 
-
-  <!--  Third section: Portfolio -->
+    <!--  Third section: Portfolio -->
     <div class="flex flex-col p-10 md:p-20 bg-darkest min-h-screen" id="portfolio">
       <div class="flex justify-center mb-12">
         <span class="flex items-center justify-center w-10 h-10 bg-blue-100 font-thin rounded-full -start-3 ring-4 ring-white text-2xl"><i class="fa-solid fa-code text-light"></i></span>
@@ -294,7 +297,7 @@
       </div>
     </div>
 
-  <!--  Forth section: Contact -->
+    <!--  Forth section: Contact -->
     <div class="h-screen relative">
       <div class="h-screen bg-cover bg-center bg-no-repeat bg-opacity-50" style="background: url('./Images/writing.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <!--  Background Image -->
@@ -302,7 +305,7 @@
       <div class="flex flex-col justify-between p-5 pt-10 lg:p-20 absolute inset-0 bg-black bg-opacity-70 space-y-2">
         <!--  Black transparent layer -->
         <div class="flex justify-center mb-12">
-          <span class="flex items-center justify-center w-10 h-10 bg-blue-100 font-thin rounded-full -start-3 ring-4 ring-white text-3xl"><i class="fa-solid fa-envelope text-light"></i></span>
+          <span class="flex items-center justify-center w-10 h-10 bg-blue-100 font-thin rounded-full -start-3 ring-4 ring-white text-2xl"><i class="fa-solid fa-envelope text-light"></i></span>
         </div>
         <!--  Form -->
         <div class="flex items-center justify-center w-full">
@@ -328,31 +331,45 @@
         </div>
       </div>  
     </div>
-
 </div>
 
 <script>
-  function handleCertificateClick(imageSrc) {
+// certificates modal function
+function handleCertificateClick(imageSrc) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.classList.remove("hidden");
+  modalImg.src = imageSrc;
+}
+
+document.querySelectorAll('.close').forEach(function(el) {
+  el.addEventListener('click', function() {
     var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
-    modal.classList.remove("hidden");
-    modalImg.src = imageSrc;
+    modal.classList.add("hidden");
+  });
+});
+
+document.getElementById("imageModal").addEventListener('click', function(event) {
+  if (event.target === this) {
+    var modal = document.getElementById("imageModal");
+    modal.classList.add("hidden");
   }
-  
-  document.querySelectorAll('.close').forEach(function(el) {
-    el.addEventListener('click', function() {
-      var modal = document.getElementById("imageModal");
-      modal.classList.add("hidden");
+});
+
+// Smooth scrolling functionality
+document.querySelectorAll('.nav-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const offsetTop = target.offsetTop;
+    window.scroll({
+      top: offsetTop,
+      behavior: 'smooth'
     });
   });
-  
-  document.getElementById("imageModal").addEventListener('click', function(event) {
-    if (event.target === this) {
-      var modal = document.getElementById("imageModal");
-      modal.classList.add("hidden");
-    }
-  });
-  </script>
+});
+
+</script>
 
 </body>
 </html>  
