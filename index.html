@@ -16,6 +16,15 @@
       .bg-darkest{ background-color: #0b141b;}
       .text-light{ color: #00a884;}
       .border-light{ border-color: #00a884;}
+       /* Custom styles for accordion */
+      .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+      }
+      .accordion-content.open {
+          max-height: 500px; /* Adjust based on content size */
+      }
     </style>
 </head>
 <body>
@@ -120,98 +129,113 @@
         <div class="flex justify-center mb-12">
           <span class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full -start-3 ring-4 ring-white text-2xl"><i class="fa-solid fa-briefcase text-light"></i></span>
         </div>
-        <ol class="relative border-s border-gray-700 border-dotted">  
-          <li class="mb-10 ms-8">            
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
-                  <i class="fa-solid fa-briefcase text-light"></i>
-              </span>
-              <h3 class="mb-1 text-lg font-semibold text-white">Web Developer</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-white">Zero Axis · Part-time</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Aug 2023 - Present · Remote</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
-                  As a Web Developer at Zero Axis, I contributed to multiple projects, focusing on creating user-friendly web solutions. My work emphasized optimizing interfaces and enhancing digital experiences through secure and scalable applications.<br></br>
-                  <ul class="list-disc mt-1">
-                      <li>Developed reusable, high-performance frontend components using React and Vue.</li>
-                      <li>Retrieved data from backend APIs and integrated it into frontend applications.</li>
-                      <li>Collaborated with backend and UI/UX teams to ensure seamless functionality and user experience.</li>
-                      <li>Applied best practices for performance, scalability, and responsive design.</li>
-                  </ul>
-              </time>
-          </li>                
-          <li class="mb-10 ms-8">            
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
-                <i class="fa-solid fa-briefcase text-light"></i>
-              </span>
-              <h3 class="mb-1 text-lg font-semibold text-white">Werkstudent-Frontend Web Developer</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-white ">easyfeedback GmbH · Part-time</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Nov 2019 - Nov 2022 · 3 yrs 1 mo</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Koblenz, Rhineland-Palatinate, Germany · On-site</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">
-              Easyfeedback is an online survey tool with more than 100,000,000 participants. I played my part in its continuous success by improving both the website and the main survey tool in the following ways:<br></br>
-                <ul class="list-disc mt-1">
-                  <li>Collaborated with UX designers and product owners to translate Adobe
-                    XD designs into functional UIs, ensuring user-centric design principles.</li>
-                  <li>Engineered user interfaces using HTML, CSS, Bootstrap, JavaScript,
-                    and React.js in an agile development environment.</li>
-                  <li>Integrated server-side and client-side functionality through RESTful
-                    APIs.</li>
-                  <li>Enhanced user interfaces with a component-based approach in React.js,
-                    focusing on reusability.</li> 
-                  <li>Embraced Scrum methodology, actively participating in sprint activities
-                    and maintaining clear communication with the team.</li>
-                  <li>Utilized Jira for issue tracking, sprint planning, and task management.</li>
-                </ul>
-              </time>
-          </li>
-          <li class="mb-10 ms-8">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
-                <i class="fa-solid fa-briefcase text-light"></i>
-              </span>
-              <h3 class="mb-1 text-lg font-semibold text-white">Werkstudent-Application Tester (Mobile & Web)</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-white">FLEET-LINK GmbH · Part-time</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Apr 2019 - Oct 2019 · 7 mos</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Höhr-Grenzhausen, Rhineland-Palatinate, Germany · Remote</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">
-                <ul class="list-disc">
-                  <li>Implemented detailed test cases on Confluence for web and mobile applications.</li>
-                  <li>Executed manual testing plans to evaluate the software quality and performance.</li>
-                  <li>Ensured the integrity of existing functionalities by identifying more than 70 regression bugs.</li>
-                  <li>Identified and reported more than 100 bugs and collaborated with development teams for resolution.</li>
-                  <li>Documented the testing procedures, test cases and results.</li>
-                </ul>
-              </time>
-          </li>              
-          <li class="mb-10 ms-8">            
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
-              <i class="fa-solid fa-briefcase text-light"></i>
-              </span>
-              <h3 class="mb-1 text-lg font-semibold text-white">Web Designer and Developer</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-white ">FirstStep Communications · Full-time</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Mar 2018 - Sep 2018 · 7 mos</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300 ">Rawalpindi, Punjab, Pakistan · On-site</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">
-                <ul class="list-disc">
-                  <li>Designed web layouts using Photoshop, ensuring visually appealing and user-friendly interfaces.</li>
-                  <li>Translated design mockups into functional and responsive web interfaces.</li>
-                  <li>Helped the colleagues with overcoming the design and development related challenges.</li>
-                </ul>
-              </time>   
-          </li>
-          <li class="ms-8">
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
-              <i class="fa-solid fa-briefcase text-light"></i>
-              </span>
-              <h3 class="mb-1 text-lg font-semibold text-white">Web Designer and Developer</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-white">Grouper Logic · Internship</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Sep 2017 - Feb 2018 · 6 mos</time>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Rawalpindi, Punjab, Pakistan · On-site</time>   
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">
-                <ul class="list-disc">
-                  <li>Learned web layout design using Photoshop, prioritizing user-friendly interfaces.</li>
-                  <li>Practiced converting mockups into functional web interfaces with focus on responsiveness and functionality.</li>
-                </ul>    
-              </time>
-          </li>
+        <ol class="relative border-s border-gray-700 border-dotted">
+            <li class="mb-4 ms-8">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                    <i class="fa-solid fa-briefcase text-gray-800"></i>
+                </span>
+                <div class="cursor-pointer" onclick="toggleAccordion(this)">
+                    <h3 class="mb-1 text-lg font-semibold text-white">Web Developer</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-white">Zero Axis · Part-time</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Aug 2023 - Present · Remote</time>
+                </div>
+                <div class="accordion-content">
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        As a Web Developer at Zero Axis, I contributed to multiple projects, focusing on creating user-friendly web solutions. My work emphasized optimizing interfaces and enhancing digital experiences through secure and scalable applications.<br><br>
+                        <ul class="list-disc mt-1 pl-5">
+                            <li>Developed reusable, high-performance frontend components using React and Vue.</li>
+                            <li>Retrieved data from backend APIs and integrated it into frontend applications.</li>
+                            <li>Collaborated with backend and UI/UX teams to ensure seamless functionality and user experience.</li>
+                            <li>Applied best practices for performance, scalability, and responsive design.</li>
+                        </ul>
+                    </time>
+                </div>
+            </li>
+            <li class="mb-4 ms-8">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                    <i class="fa-solid fa-briefcase text-gray-800"></i>
+                </span>
+                <div class="cursor-pointer" onclick="toggleAccordion(this)">
+                    <h3 class="mb-1 text-lg font-semibold text-white">Werkstudent-Frontend Web Developer</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-white">easyfeedback GmbH · Part-time</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Nov 2019 - Nov 2022 · 3 yrs 1 mo</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Koblenz, Rhineland-Palatinate, Germany · On-site</time>
+                </div>
+                <div class="accordion-content">
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        Easyfeedback is an online survey tool with more than 100,000,000 participants. I played my part in its continuous success by improving both the website and the main survey tool in the following ways:<br><br>
+                        <ul class="list-disc mt-1 pl-5">
+                            <li>Collaborated with UX designers and product owners to translate Adobe XD designs into functional UIs, ensuring user-centric design principles.</li>
+                            <li>Engineered user interfaces using HTML, CSS, Bootstrap, JavaScript, and React.js in an agile development environment.</li>
+                            <li>Integrated server-side and client-side functionality through RESTful APIs.</li>
+                            <li>Enhanced user interfaces with a component-based approach in React.js, focusing on reusability.</li>
+                            <li>Embraced Scrum methodology, actively participating in sprint activities and maintaining clear communication with the team.</li>
+                            <li>Utilized Jira for issue tracking, sprint planning, and task management.</li>
+                        </ul>
+                    </time>
+                </div>
+            </li>
+            <li class="mb-4 ms-8">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                    <i class="fa-solid fa-briefcase text-gray-800"></i>
+                </span>
+                <div class="cursor-pointer" onclick="toggleAccordion(this)">
+                    <h3 class="mb-1 text-lg font-semibold text-white">Werkstudent-Application Tester (Mobile & Web)</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-white">FLEET-LINK GmbH · Part-time</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Apr 2019 - Oct 2019 · 7 mos</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Höhr-Grenzhausen, Rhineland-Palatinate, Germany · Remote</time>
+                </div>
+                <div class="accordion-content">
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        <ul class="list-disc pl-5">
+                            <li>Implemented detailed test cases on Confluence for web and mobile applications.</li>
+                            <li>Executed manual testing plans to evaluate the software quality and performance.</li>
+                            <li>Ensured the integrity of existing functionalities by identifying more than 70 regression bugs.</li>
+                            <li>Identified and reported more than 100 bugs and collaborated with development teams for resolution.</li>
+                            <li>Documented the testing procedures, test cases, and results.</li>
+                        </ul>
+                    </time>
+                </div>
+            </li>
+            <li class="mb-4 ms-8">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                    <i class="fa-solid fa-briefcase text-gray-800"></i>
+                </span>
+                <div class="cursor-pointer" onclick="toggleAccordion(this)">
+                    <h3 class="mb-1 text-lg font-semibold text-white">Web Designer and Developer</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-white">FirstStep Communications · Full-time</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Mar 2018 - Sep 2018 · 7 mos</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Rawalpindi, Punjab, Pakistan · On-site</time>
+                </div>
+                <div class="accordion-content">
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        <ul class="list-disc pl-5">
+                            <li>Designed web layouts using Photoshop, ensuring visually appealing and user-friendly interfaces.</li>
+                            <li>Translated design mockups into functional and responsive web interfaces.</li>
+                            <li>Helped colleagues with overcoming design and development-related challenges.</li>
+                        </ul>
+                    </time>
+                </div>
+            </li>
+            <li class="mb-4 ms-8">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                    <i class="fa-solid fa-briefcase text-gray-800"></i>
+                </span>
+                <div class="cursor-pointer" onclick="toggleAccordion(this)">
+                    <h3 class="mb-1 text-lg font-semibold text-white">Web Designer and Developer</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-white">Grouper Logic · Internship</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Sep 2017 - Feb 2018 · 6 mos</time>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-300">Rawalpindi, Punjab, Pakistan · On-site</time>
+                </div>
+                <div class="accordion-content">
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        <ul class="list-disc pl-5">
+                            <li>Learned web layout design using Photoshop, prioritizing user-friendly interfaces.</li>
+                            <li>Practiced converting mockups into functional web interfaces with focus on responsiveness and functionality.</li>
+                        </ul>
+                    </time>
+                </div>
+            </li>
         </ol>
       </div>
     </div>
@@ -415,6 +439,26 @@ document.querySelectorAll('.nav-link').forEach(anchor => {
     });
   });
 });
+
+// function for handling expereinces's hide/show toggle
+function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const allContents = document.querySelectorAll('.accordion-content');
+            const isOpen = content.classList.contains('open');
+
+            // Close all accordion items
+            allContents.forEach(item => {
+                item.classList.remove('open');
+            });
+
+            // Open the clicked item if it wasn't already open
+            if (!isOpen) {
+                content.classList.add('open');
+            }
+        }
+
+        // Open the first accordion item by default
+        document.querySelector('.accordion-content').classList.add('open');
 
 </script>
 
